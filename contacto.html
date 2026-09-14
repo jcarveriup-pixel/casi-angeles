@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - Casi Ángeles Wiki</title>
+
+    <link rel="stylesheet" href="csss/estilo.css">
+</head>
+
+<body class="pagina-contacto">
+
+<div class="pagina">
+
+    <header class="header">
+
+        <h1>CASI ANGELES WIKI</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="casiangeles.html">Casi Ángeles</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <main class="contenido-contacto">
+
+        <h2>CONTACTO</h2>
+
+        <div class="contacto-grid">
+
+            <!-- PARTE IZQUIERDA -->
+            <div class="contacto-info">
+
+                <div class="sobre-contacto">
+                    ✉
+                </div>
+
+                <p>
+                    ¿Tenés alguna pregunta,<br>
+                    sugerencia o querés<br>
+                    colaborar con la wiki?<br>
+                    ¡Escribinos!
+                </p>
+
+            </div>
+
+
+            <!-- FORMULARIO -->
+            <form class="formulario-contacto" id="formContacto">
+
+                <div class="campo-contacto">
+
+                    <label for="nombre">
+                        Nombre:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-contacto">
+
+                    <label for="email">
+                        Email:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tunombre@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-contacto">
+
+                    <label for="asunto">
+                        Asunto:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="asunto"
+                        name="asunto"
+                        placeholder="Escribí el asunto"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-contacto">
+
+                    <label for="mensaje">
+                        Mensaje:
+                    </label>
+
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Escribí tu mensaje..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="boton-enviar"
+                >
+                    Enviar
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <span>© Casi Ángeles Wiki</span>
+
+        <span>Síguenos:</span>
+
+        <span>◎</span>
+        <span>f</span>
+        <span>♥</span>
+        <span>▶</span>
+        <span>♪</span>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+document
+    .getElementById("formContacto")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const nombre =
+            document.getElementById("nombre").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const asunto =
+            document.getElementById("asunto").value;
+
+        const mensaje =
+            document.getElementById("mensaje").value;
+
+
+        const cuerpo =
+            "Nombre: " + nombre +
+            "\n" +
+            "Email: " + email +
+            "\n\n" +
+            "Mensaje:" +
+            "\n" +
+            mensaje;
+
+
+        const mailto =
+            "mailto:TUEMAIL@gmail.com" +
+            "?subject=" +
+            encodeURIComponent(asunto) +
+            "&body=" +
+            encodeURIComponent(cuerpo);
+
+
+        window.location.href = mailto;
+
+    });
+
+</script>
+
+</body>
+
+</html>

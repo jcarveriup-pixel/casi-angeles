@@ -1,0 +1,1391 @@
+/* =========================================================
+   CASI ÁNGELES WIKI - CSS GENERAL LIMPIO
+   REEMPLAZÁ TODO tu csss/estilo.css por este archivo.
+   ========================================================= */
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{min-height:100%}
+body{
+  min-height:100vh;
+  font-family:Georgia,"Times New Roman",serif;
+  color:#74277d;
+  background-image:url("../imageness/fondo.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+/* ---------- BASE PARA TODAS LAS PÁGINAS ---------- */
+.pagina{
+  width:850px;
+  max-width:92%;
+  margin:30px auto;
+  padding:14px;
+  background:transparent;
+}
+
+.header{
+  min-height:48px;
+  background:rgba(255,255,255,.96);
+  border:2px solid #dac7eb;
+  border-radius:15px;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.header h1{font-size:18px;font-weight:normal;white-space:nowrap}
+.header nav{display:flex;gap:15px;align-items:center}
+.header nav a{color:#74277d;text-decoration:none;font-size:11px}
+.header nav a:hover,.header nav a.activo{font-weight:bold;text-decoration:underline}
+
+footer,.footer{
+  min-height:38px;
+  margin-top:12px;
+  padding:9px 14px;
+  background:rgba(255,255,255,.96);
+  border:2px solid #dac7eb;
+  border-radius:15px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  font-size:10px;
+}
+
+/* =========================================================
+   HOME
+   ========================================================= */
+.bienvenida{
+  min-height:200px;
+  margin-top:12px;
+  padding:30px 45px;
+  border:2px solid #dac7eb;
+  border-radius:15px;
+  background:rgba(255,255,255,.78);
+  position:relative;
+}
+.bienvenida h2{font-size:23px;font-weight:normal;line-height:1.3}
+.bienvenida p{margin-top:28px;font-size:12px;text-align:center;width:240px}
+.boton-explorar{
+  position:absolute;left:48%;top:120px;
+  background:#ead8f5;padding:12px 20px;
+  color:#74277d;text-decoration:none;font-size:12px;font-weight:bold
+}
+.contenido{display:grid;grid-template-columns:280px 1fr;gap:18px;margin-top:18px}
+.tarjeta{
+  background:rgba(255,255,255,.96);
+  border:2px solid #dac7eb;border-radius:15px;
+  padding:14px;margin-bottom:15px
+}
+.tarjeta h3{font-size:18px;font-weight:normal;margin-bottom:13px}
+.noticias{min-height:380px}
+.noticia{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.noticia img{width:85px;height:85px;object-fit:cover}
+.noticia p{font-size:9px;line-height:1.3}
+.ver-mas{display:block;margin-top:8px;text-align:right;color:#74277d;text-decoration:none;font-size:10px}
+
+/* HOME - temporadas */
+.temporadas-grid-home{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.temporadas-grid-home a{height:60px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#74277d;font-size:16px}
+.t1{background:#e3d1f2}.t2{background:#f2cee6}.t3{background:#b9ddf5}.t4{background:#bce8e8}
+
+/* HOME - personajes */
+.personajes{min-height:180px}
+.personajes-grid{display:flex;justify-content:space-between;gap:10px}
+.personaje{text-align:center;font-size:11px}
+.avatar{width:62px;height:62px;border-radius:50%;position:relative;margin-bottom:5px}
+.avatar::before{content:"";width:21px;height:21px;background:rgba(255,255,255,.55);border-radius:50%;position:absolute;top:10px;left:20px}
+.avatar::after{content:"";width:38px;height:20px;background:rgba(255,255,255,.55);border-radius:25px 25px 0 0;position:absolute;bottom:7px;left:12px}
+.rosa{background:#ef92cf}.celeste{background:#77c9ee}.violeta{background:#ad6ec2}.aqua{background:#76d8d4}.naranja{background:#ffa066}
+.bloques-inferiores{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.teen-home{text-align:center;min-height:300px}
+.teen-home h3{text-align:left}
+.teen-img{width:100%;height:150px;object-fit:cover}
+.teen-home p{font-size:9px;margin:12px 0;line-height:1.3}
+.boton{display:block;padding:10px;background:#ead8f5;text-decoration:none;color:#74277d;font-size:12px}
+.galeria{min-height:300px}
+.galeria-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:4px}
+.foto{height:95px}.foto1{background:#dfcff3}.foto2{background:#f4cee5}.foto3{background:#b7ddf6}.foto4{background:#bce8e8}
+
+/* =========================================================
+   CASI ANGELES
+   body class="pagina-casi"
+   ========================================================= */
+.pagina-casi .contenido-casi{
+  margin-top:12px;
+  background:rgba(255,255,255,.94);
+  border:2px solid #d8c3ef;
+  border-radius:15px;
+  overflow:hidden;
+}
+.pagina-casi .seccion-casi{padding:16px 18px}
+.pagina-casi .seccion-casi+.seccion-casi{border-top:1px solid #d8c3ef}
+.pagina-casi .seccion-casi h2{font-size:17px;font-weight:normal;margin-bottom:12px}
+.pagina-casi .seccion-casi h2 a{color:#74277d;text-decoration:none}
+.pagina-casi .sinopsis-fila{display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:center}
+.pagina-casi .sinopsis-fila img{width:180px;height:100px;object-fit:cover}
+.pagina-casi .texto-sinopsis p{font-size:11px;line-height:1.5}
+.pagina-casi .temporadas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pagina-casi .temporada-card{background:transparent}
+.pagina-casi .temporada-card img{width:100%;height:90px;display:block;object-fit:cover}
+.pagina-casi .temporada-card h3{font-size:14px;margin-top:7px}
+.pagina-casi .temporada-card p{font-size:9px;line-height:1.3}
+.pagina-casi .teen-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.pagina-casi .teen-card{text-align:center}
+.pagina-casi .teen-card img{width:75px;height:75px;object-fit:cover;border:2px solid #d8c3ef}
+.pagina-casi .teen-card p{margin-top:5px;font-size:10px}
+
+/* =========================================================
+   SINOPSIS
+   body class="pagina-sinopsis"
+   ========================================================= */
+.pagina-sinopsis .pagina-sinopsis-contenido{
+  margin-top:12px;padding:18px;
+  background:rgba(255,255,255,.94);
+  border:2px solid #d8c3ef;border-radius:15px
+}
+.ruta{font-size:10px;margin-bottom:8px}
+.pagina-sinopsis .pagina-sinopsis-contenido>h2{font-size:22px;font-weight:normal;margin-bottom:12px}
+.caja-detalle{background:rgba(255,255,255,.9);border:1.5px solid #d7c5e8;border-radius:12px;padding:14px;margin-bottom:12px}
+.caja-detalle h3{font-size:16px;margin-bottom:10px}
+.sinopsis-detalle{display:grid;grid-template-columns:30% 1fr;gap:20px;align-items:center}
+.sinopsis-detalle img{width:100%;height:145px;object-fit:cover}
+.sinopsis-detalle p,.contexto p{font-size:11px;line-height:1.5;margin-bottom:8px}
+.temas{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tema{border:1px solid #d7c5e8;padding:10px;display:flex;gap:10px;align-items:center}
+.tema span{font-size:30px}.tema h4{font-size:12px;margin-bottom:4px}.tema p{font-size:9px}
+.contexto{display:grid;grid-template-columns:1fr 27%;gap:18px;align-items:center}
+.contexto img{width:100%;height:105px;object-fit:cover}
+.momentos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.momento{border:1px solid #d7c5e8;padding:7px}
+.momento img{width:100%;height:80px;object-fit:cover}
+.momento p{font-size:9px;margin-top:5px}
+
+/* =========================================================
+   TEMPORADAS
+   body class="pagina-temporadas"
+   ========================================================= */
+.pagina-temporadas .contenido-temporadas{
+  margin-top:12px;padding:18px;
+  background:rgba(255,255,255,.94);
+  border:2px solid #d8c3ef;border-radius:15px
+}
+.pagina-temporadas .contenido-temporadas h2{font-size:20px;margin-bottom:14px;color:#74277d}
+.fila-temporada{display:grid;grid-template-columns:160px 1fr 110px;gap:18px;align-items:center;background:#fff;border:1.5px solid #d8c3ef;border-radius:10px;padding:10px;margin-bottom:10px}
+.fila-temporada img{width:160px;height:95px;object-fit:cover}
+.info-temporada h3{font-size:16px;margin-bottom:6px;color:#74277d}
+.info-temporada p{font-size:10px;line-height:1.4;color:#74277d}
+.boton-ver{text-decoration:none;color:#74277d;border:1px solid #d8c3ef;padding:8px 12px;text-align:center;font-size:10px;background:#fff}
+.boton-ver:hover{background:#ead8f5}
+
+/* =========================================================
+   TEMPORADA 1
+   body class="pagina-temporada1"
+   ========================================================= */
+.pagina-temporada1 .detalle-temporada{
+  margin-top:12px;padding:20px;
+  background:rgba(255,255,255,.94);
+  border:2px solid #d8c3ef;border-radius:15px
+}
+.volver{text-decoration:none;color:#74277d;font-size:10px}
+.detalle-temporada h2{color:#74277d;font-size:22px;font-weight:normal;margin:12px 0 15px}
+.temporada-detalle-contenido{display:grid;grid-template-columns:55% 1fr;gap:25px}
+.collage-temporada{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:120px 80px 70px;gap:8px}
+.collage-temporada img{width:100%;height:100%;object-fit:cover;border-radius:5px}
+.foto-grande{grid-column:1/3;grid-row:1}.foto-chica{grid-column:3;grid-row:1}.foto-vertical{grid-column:1;grid-row:2/4}.foto-mediana{grid-column:2;grid-row:2}.foto-mini{grid-column:2/4;grid-row:3}
+.descripcion-temporada p{font-size:11px;line-height:1.5;margin-bottom:18px}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media(max-width:900px){
+  .pagina{width:95%}
+  .contenido{grid-template-columns:1fr}
+  .bloques-inferiores{grid-template-columns:1fr}
+  .header{flex-direction:column;gap:10px}
+  .header nav{flex-wrap:wrap;justify-content:center}
+  .personajes-grid{flex-wrap:wrap;justify-content:center}
+  .pagina-casi .temporadas-grid{grid-template-columns:repeat(2,1fr)}
+  .pagina-casi .teen-grid{grid-template-columns:repeat(2,1fr)}
+  .pagina-casi .sinopsis-fila,.sinopsis-detalle,.contexto,.temporada-detalle-contenido{grid-template-columns:1fr}
+  .temas,.momentos{grid-template-columns:1fr}
+  .fila-temporada{grid-template-columns:1fr}
+  .fila-temporada img{width:100%;height:150px}
+}
+/* MÁS ESPACIO Y MEJOR DISTRIBUCIÓN */
+
+.pagina-casi .contenido-casi {
+    padding: 18px;
+}
+
+/* Separación entre Sinopsis, Temporadas y Teen Angels */
+.pagina-casi .seccion-casi {
+    padding: 24px 22px;
+}
+
+/* Línea y aire entre secciones */
+.pagina-casi .seccion-casi + .seccion-casi {
+    border-top: 1px solid #e6d9ef;
+    margin-top: 12px;
+    padding-top: 28px;
+}
+
+/* Más espacio entre las temporadas */
+.pagina-casi .temporadas-grid {
+    gap: 24px;
+}
+
+/* Tarjetas de temporada más prolijas */
+.pagina-casi .temporada-card {
+    background-color: rgba(255,255,255,0.75);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+/* Más aire entre Teen Angels */
+.pagina-casi .teen-grid {
+    gap: 30px;
+    padding: 8px 0 6px;
+}
+
+/* Más espacio arriba de los títulos */
+.pagina-casi .seccion-casi h2 {
+    margin-bottom: 18px;
+}
+
+.link-temporada {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* ==========================
+   PAGINA PERSONAJES
+========================== */
+
+.pagina-personajes .contenido-personajes {
+    margin-top: 12px;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.pagina-personajes .contenido-personajes h2 {
+    text-align: left;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.categorias-personajes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    justify-content: center;
+}
+
+.categoria-personaje {
+    min-height: 150px;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 14px;
+
+    text-decoration: none;
+    color: #74277d;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+}
+
+.categoria-personaje h3 {
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: normal;
+}
+
+.icono-personaje {
+    font-size: 42px;
+}
+
+.categorias-personajes .categoria-personaje:nth-child(5) {
+    grid-column: 2;
+}
+
+.categorias-personajes .categoria-personaje:nth-child(6) {
+    grid-column: 3;
+}
+
+.boton-personajes {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 9px 22px;
+
+    border: 1px solid #d8c3ef;
+
+    color: #74277d;
+    text-decoration: none;
+
+    background: white;
+
+    font-size: 11px;
+}
+
+.boton-personajes:hover {
+    background: #ead8f5;
+}
+
+@media (max-width: 800px) {
+
+    .categorias-personajes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categorias-personajes .categoria-personaje:nth-child(5),
+    .categorias-personajes .categoria-personaje:nth-child(6) {
+        grid-column: auto;
+    }
+
+}
+
+/* ==========================
+   PAGINA PROTAGONISTAS
+========================== */
+
+.pagina-protagonistas .contenido-protagonistas {
+    margin-top: 12px;
+    padding: 18px;
+
+    background: rgba(255,255,255,0.94);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+}
+
+.pagina-protagonistas .contenido-protagonistas h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 12px 0 16px;
+}
+
+.protagonistas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.protagonista-card {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 10px;
+
+    padding: 8px;
+}
+
+.protagonista-card img {
+    width: 115px;
+    height: 95px;
+
+    object-fit: cover;
+}
+
+.protagonista-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.protagonista-card p {
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+
+    .protagonistas-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================
+   PAGINA VILLANOS
+========================== */
+
+.pagina-villanos .contenido-villanos {
+    margin-top: 12px;
+    padding: 18px;
+
+    background: rgba(255,255,255,0.94);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+}
+
+.pagina-villanos .contenido-villanos h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 12px 0 16px;
+}
+
+.villanos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.villano-card {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 10px;
+
+    padding: 8px;
+}
+
+.villano-card img {
+    width: 115px;
+    height: 95px;
+    object-fit: cover;
+}
+
+.villano-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.villano-card p {
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+
+    .villanos-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ==========================
+   PAGINA TEEN ANGELS
+========================== */
+
+.pagina-teenangels .contenido-teenangels {
+    margin-top: 12px;
+    padding: 18px;
+
+    background: rgba(255,255,255,0.94);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+}
+
+.pagina-teenangels .contenido-teenangels h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 12px 0 16px;
+}
+
+.teenangels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.teenangel-card {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 10px;
+
+    padding: 8px;
+}
+
+.teenangel-card img {
+    width: 115px;
+    height: 95px;
+    object-fit: cover;
+}
+
+.teenangel-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.teenangel-card p {
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+/* Para que el quinto quede centrado abajo */
+.teenangel-card:nth-child(5) {
+    grid-column: 1 / 3;
+    width: calc(50% - 6px);
+    justify-self: center;
+}
+
+@media (max-width: 800px) {
+
+    .teenangels-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teenangel-card:nth-child(5) {
+        grid-column: auto;
+        width: 100%;
+    }
+
+}
+
+/* ==========================
+   PAGINA MAN
+========================== */
+
+.pagina-man .contenido-man {
+    margin-top: 12px;
+    padding: 18px;
+
+    background: rgba(255,255,255,0.94);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+}
+
+.pagina-man .contenido-man h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 12px 0 16px;
+}
+
+.man-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.man-card {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 10px;
+
+    padding: 8px;
+}
+
+.man-card img {
+    width: 115px;
+    height: 95px;
+    object-fit: cover;
+}
+
+.man-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.man-card p {
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+/* Quinto integrante centrado */
+.man-card:nth-child(5) {
+    grid-column: 1 / 3;
+    width: calc(50% - 6px);
+    justify-self: center;
+}
+
+@media (max-width: 800px) {
+
+    .man-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .man-card:nth-child(5) {
+        grid-column: auto;
+        width: 100%;
+    }
+
+}
+
+/* ==========================
+   PAGINA JUVENILES
+========================== */
+
+.pagina-juveniles .contenido-juveniles {
+    margin-top: 12px;
+    padding: 18px;
+
+    background: rgba(255,255,255,0.94);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+}
+
+.pagina-juveniles .contenido-juveniles h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 12px 0 16px;
+}
+
+.juveniles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.juvenil-card {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 10px;
+
+    padding: 8px;
+}
+
+.juvenil-card img {
+    width: 115px;
+    height: 95px;
+    object-fit: cover;
+}
+
+.juvenil-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.juvenil-card p {
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.juvenil-card:nth-child(5) {
+    grid-column: 1 / 3;
+    width: calc(50% - 6px);
+    justify-self: center;
+}
+
+@media (max-width: 800px) {
+
+    .juveniles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .juvenil-card:nth-child(5) {
+        grid-column: auto;
+        width: 100%;
+    }
+
+}
+
+/* ==========================
+   PAGINA PAREJAS
+========================== */
+
+.pagina-parejas .contenido-parejas {
+    margin-top: 12px;
+    padding: 18px;
+
+    background: rgba(255,255,255,0.94);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+}
+
+.pagina-parejas .contenido-parejas h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 12px 0 16px;
+}
+
+.parejas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.pareja-card {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 10px;
+
+    padding: 8px;
+}
+
+.pareja-card img {
+    width: 115px;
+    height: 95px;
+    object-fit: cover;
+}
+
+.pareja-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.pareja-card p {
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+
+    .parejas-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================
+   PAGINA HISTORIA
+========================== */
+
+.pagina-historia .contenido-historia {
+    margin-top: 14px;
+}
+
+.intro-historia {
+    background: rgba(255,255,255,0.94);
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+
+    padding: 22px;
+    margin-bottom: 18px;
+}
+
+.intro-historia h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.intro-historia p {
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+
+.historia-bloques {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+.historia-card {
+    min-height: 170px;
+
+    background: rgba(255,255,255,0.95);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+
+    padding: 20px;
+
+    text-decoration: none;
+    color: #74277d;
+
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+
+.historia-card:hover {
+    transform: translateY(-3px);
+    background: #f7effb;
+}
+
+
+.historia-icono {
+    width: 65px;
+    height: 65px;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 31px;
+
+    flex-shrink: 0;
+}
+
+
+.historia-texto h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+
+.historia-texto p {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+.historia-texto span {
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 800px) {
+
+    .historia-bloques {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================
+   PAGINA GALERIA
+========================== */
+
+.pagina-galeria .contenido-galeria {
+    margin-top: 14px;
+
+    background: rgba(255,255,255,0.95);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+
+.pagina-galeria .contenido-galeria h2 {
+    font-size: 21px;
+    font-weight: normal;
+
+    padding: 18px 20px 8px;
+}
+
+
+.galeria-seccion {
+    padding: 12px 20px 16px;
+
+    border-bottom: 1px solid #d8c3ef;
+}
+
+
+.galeria-seccion:last-child {
+    border-bottom: none;
+}
+
+
+.galeria-seccion h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+
+.galeria-fila {
+    display: grid;
+
+    grid-template-columns: 1fr 90px;
+
+    gap: 18px;
+
+    align-items: center;
+}
+
+
+.galeria-imagenes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.galeria-imagenes img {
+    width: 100%;
+    height: 75px;
+
+    object-fit: cover;
+
+    border: 1px solid #d8c3ef;
+}
+
+
+.ver-mas-galeria {
+    text-decoration: none;
+
+    color: #74277d;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+.ver-mas-galeria:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 800px) {
+
+    .galeria-fila {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-imagenes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ver-mas-galeria {
+        text-align: right;
+    }
+
+}
+
+/* ==========================
+   PAGINA CONTACTO
+========================== */
+
+.pagina-contacto .contenido-contacto {
+    margin-top: 14px;
+
+    background: rgba(255,255,255,0.95);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+
+    padding: 22px;
+}
+
+
+.pagina-contacto .contenido-contacto h2 {
+    font-size: 21px;
+    font-weight: normal;
+
+    margin-bottom: 24px;
+}
+
+
+.contacto-grid {
+    display: grid;
+
+    grid-template-columns: 35% 65%;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+/* PARTE IZQUIERDA */
+
+.contacto-info {
+    text-align: center;
+
+    padding-top: 20px;
+}
+
+
+.sobre-contacto {
+    width: 190px;
+    height: 110px;
+
+    margin: 0 auto 35px;
+
+    border: 2px solid #d8c3ef;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 60px;
+
+    background: white;
+}
+
+
+.contacto-info p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* FORMULARIO */
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.campo-contacto {
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+.campo-contacto label {
+    font-size: 12px;
+}
+
+
+.campo-contacto input {
+    height: 30px;
+
+    border: 1.5px solid #d8c3ef;
+
+    padding: 6px 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #74277d;
+
+    background: white;
+}
+
+
+.campo-contacto textarea {
+    height: 120px;
+
+    border: 1.5px solid #d8c3ef;
+
+    padding: 10px;
+
+    resize: vertical;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #74277d;
+
+    background: white;
+}
+
+
+.boton-enviar {
+    width: 180px;
+
+    align-self: flex-end;
+
+    padding: 9px;
+
+    background: white;
+
+    color: #74277d;
+
+    border: 1.5px solid #d8c3ef;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    cursor: pointer;
+}
+
+
+.boton-enviar:hover {
+    background: #f3e8f8;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .boton-enviar {
+        width: 100%;
+    }
+
+}
+
+/* ==========================
+   PAGINA CONTACTO
+========================== */
+
+.pagina-contacto .contenido-contacto {
+    margin-top: 14px;
+    padding: 22px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 2px solid #d8c3ef;
+    border-radius: 15px;
+}
+
+
+/* TITULO */
+
+.pagina-contacto .contenido-contacto h2 {
+    font-size: 21px;
+    font-weight: normal;
+
+    margin-bottom: 28px;
+}
+
+
+/* ESTRUCTURA GENERAL */
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 35% 65%;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+/* ==========================
+   PARTE IZQUIERDA
+========================== */
+
+.contacto-info {
+    text-align: center;
+    padding-top: 18px;
+}
+
+
+.sobre-contacto {
+    width: 190px;
+    height: 110px;
+
+    margin: 0 auto 35px;
+
+    background: white;
+
+    border: 2px solid #d8c3ef;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+}
+
+
+.contacto-info p {
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #74277d;
+}
+
+
+/* ==========================
+   FORMULARIO
+========================== */
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* CADA CAMPO */
+
+.campo-contacto {
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+.campo-contacto label {
+    font-size: 12px;
+
+    color: #74277d;
+}
+
+
+/* INPUTS */
+
+.campo-contacto input {
+    width: 100%;
+    height: 34px;
+
+    padding: 6px 10px;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 4px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 11px;
+
+    color: #74277d;
+
+    outline: none;
+}
+
+
+/* TEXTAREA */
+
+.campo-contacto textarea {
+    width: 100%;
+    height: 125px;
+
+    padding: 10px;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 4px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 11px;
+
+    color: #74277d;
+
+    resize: vertical;
+
+    outline: none;
+}
+
+
+/* CUANDO HACES CLICK */
+
+.campo-contacto input:focus,
+.campo-contacto textarea:focus {
+    border-color: #74277d;
+}
+
+
+/* PLACEHOLDER */
+
+.campo-contacto input::placeholder,
+.campo-contacto textarea::placeholder {
+    color: #b79abc;
+}
+
+
+/* ==========================
+   BOTON ENVIAR
+========================== */
+
+.boton-enviar {
+    width: 180px;
+
+    align-self: flex-end;
+
+    padding: 9px 15px;
+
+    background: white;
+
+    border: 1.5px solid #d8c3ef;
+    border-radius: 5px;
+
+    color: #74277d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.boton-enviar:hover {
+    background: #f3e8f8;
+    border-color: #74277d;
+}
+
+
+/* ==========================
+   CELULAR
+========================== */
+
+@media (max-width: 800px) {
+
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-info {
+        padding-top: 0;
+    }
+
+    .campo-contacto {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .boton-enviar {
+        width: 100%;
+    }
+
+}
