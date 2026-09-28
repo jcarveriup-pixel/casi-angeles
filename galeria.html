@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Casi Ángeles Wiki</title>
+    <link rel="stylesheet" href="csss/estilo.css">
+</head>
+
+<body class="pagina-galeria">
+
+<div class="pagina">
+
+    <header class="header">
+
+        <h1>CASI ANGELES WIKI</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="casiangeles.html">Casi Ángeles</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html" class="activo">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <main class="contenido-galeria">
+
+        <h2>GALERÍA</h2>
+
+
+        <!-- IMÁGENES DE LA SERIE -->
+        <section class="galeria-seccion">
+
+            <h3>Imágenes de la serie</h3>
+
+            <div class="galeria-fila">
+
+                <div class="galeria-imagenes">
+                    <img src="imageness/todos.png" alt="Casi Ángeles"  style="object-position: center 40%;">
+                    <img src="imageness/fotogrande.png" alt="Casi Ángeles"  style="object-position: center 40%;">
+                    <img src="imageness/casamiento.png" alt="Casi Ángeles"  style="object-position: center 40%;">
+                    <img src="imageness/fotochica.png" alt="Casi Ángeles"  style="object-position: center 40%;">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAJES -->
+        <section class="galeria-seccion">
+
+            <h3>Personajes</h3>
+
+            <div class="galeria-fila">
+
+                <div class="galeria-imagenes">
+                    <img src="imageness/mar.png" alt="Mar" style="object-position: center 40%;">
+                    <img src="imageness/thiago.png" alt="Thiago" style="object-position: center 25%;">
+                    <img src="imageness/jazmin.png" alt="Jazmín" style="object-position: center 25%;">
+                    <img src="imageness/tacho.png" alt="Tacho" style="object-position: center 25%;">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TEEN ANGELS / SHOWS -->
+        <section class="galeria-seccion">
+
+            <h3>Teen Angels / Shows</h3>
+
+            <div class="galeria-fila">
+
+                <div class="galeria-imagenes">
+                    <img src="imageness/show1.png" alt="Teen Angels">
+                    <img src="imageness/show2.png" alt="Teen Angels">
+                    <img src="imageness/show3.png" alt="Teen Angels"  style="object-position: center 35%;">
+                    <img src="imageness/show4.png" alt="Teen Angels"  style="object-position: center 20%;">
+                </div>
+
+            
+            </div>
+
+        </section>
+
+
+        <!-- MOMENTOS DESTACADOS -->
+        <section class="galeria-seccion">
+
+            <h3>Momentos destacados</h3>
+
+            <div class="galeria-fila">
+
+                <div class="galeria-imagenes">
+                    <img src="imageness/chicast.png" alt="Momento destacado"  style="object-position: center 30%;">
+                    <img src="imageness/mometnosdestacos.png" alt="Momento destacado"  style="object-position: center 35%;">
+                    <img src="imageness/destacados.png" alt="Momento destacado"  style="object-position: center 25%;">
+                    <img src="imageness/destc.png" alt="Momento destacado"  style="object-position: center 20%;">
+                </div>
+
+                
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <span>© Juana Carveri</span>
+        <span>Síguenos:</span>
+        <span>◎</span>
+        <span>f</span>
+        <span>♥</span>
+        <span>▶</span>
+        <span>♪</span>
+
+    </footer>
+
+</div>
+
+<!-- IMAGEN AGRANDADA -->
+<div id="visor-imagen" class="visor-imagen">
+    <span class="cerrar-visor">&times;</span>
+    <img id="imagen-grande" src="" alt="Imagen ampliada">
+</div>
+
+<script>
+    const imagenes = document.querySelectorAll(".galeria-imagenes img");
+    const visor = document.getElementById("visor-imagen");
+    const imagenGrande = document.getElementById("imagen-grande");
+    const cerrar = document.querySelector(".cerrar-visor");
+
+    imagenes.forEach(function(imagen) {
+        imagen.addEventListener("click", function() {
+            imagenGrande.src = imagen.src;
+            visor.style.display = "flex";
+        });
+    });
+
+    cerrar.addEventListener("click", function() {
+        visor.style.display = "none";
+    });
+
+    visor.addEventListener("click", function(evento) {
+        if (evento.target === visor) {
+            visor.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
